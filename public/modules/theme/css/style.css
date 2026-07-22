@@ -1,41 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Kufam:ital,wght@0,400..900;1,400..900&family=Lemonada:wght@300..700&display=swap");
 
-
 :root {
-    /* اللون الأساسي (وردي اللوجو) */
-   --c-accent-rgb: 227, 108, 150;
-   --c-accent-hover-rgb: 210, 90, 132;
+    /* ===== Primary Brand (محدث) ===== */
+    --c-primary-rgb: 44, 82, 130;           /* #2c5282 - أزرق احترافي للتعليم */
+    --c-primary-dark-rgb: 26, 54, 93;       /* #1a365d */
+    --c-primary-light-rgb: 237, 242, 247;   /* #edf2f7 */
 
-    /* تركواز متناسق مع الوردي */
-   --c-secondary-rgb: 64, 188, 176;
-   --c-secondary-hover-rgb: 46, 170, 160;
+    /* ===== Secondary (محدث) ===== */
+    --c-secondary-rgb: 254, 235, 200;       /* #feebc8 - أصفر كريمي مريح */
+    --c-secondary-light-rgb: 255, 250, 240; /* #fffaf0 */
+    --c-secondary-dark-rgb: 221, 153, 52;   /* #dd9934 */
 
-    /* لون نص داكن (مريح للعين) */
-   --c-primary-rgb: 74, 58, 46;
+    /* ===== Accent ===== */
+    --c-accent-rgb: 78, 158, 215;
+    --c-success-rgb: 34, 197, 94;
+    --c-warning-rgb: 248, 169, 45;
+    --c-danger-rgb: 219, 70, 99;
 
-    /* أصفر إبراز */
-   --c-highlight-rgb: 247, 209, 92;
+    /* ===== Background ===== */
+    --c-bg-rgb: 247, 249, 252;
+    --c-section-rgb: 255, 254, 243;
+    --c-card-bg-rgb: 255, 255, 255;
 
-    /* خلفيات ناعمة */
-   --c-bg-rgb: 248, 246, 240;
-   --c-card-bg-rgb: 255, 255, 255;
-   --c-border-rgb: 230, 220, 210;
+    /* ===== Text ===== */
+    --c-title-rgb: 26, 32, 44;
+    --c-text-rgb: 45, 55, 72;
+    --c-muted-rgb: 133, 148, 168;
 
-    /* نصوص رمادي */
-   --c-gray-rgb: 150, 145, 135;
-   --c-text-rgb: 74, 58, 46;
+    /* ===== Borders ===== */
+    --c-border-rgb: 222, 228, 239;
 
-    /* Gradient بنفس هوية اللوجو */
-   --main-gradient: linear-gradient(
-       to right,
-       rgb(var(--c-accent-rgb)) 0%,
-       rgb(var(--c-secondary-rgb)) 50%,
-       rgb(var(--c-secondary-hover-rgb)) 100%
-   );
+    /* ===== Gradients (تم دمج الألوان الجديدة) ===== */
+    --main-gradient:
+        linear-gradient(135deg,
+            rgb(254, 235, 200) 0%,
+            rgb(237, 242, 247) 45%,
+            rgb(44, 82, 130) 100%);
 
-   --trans-dur: 0.5s;
-   --trans-timing: ease-in-out;
-   --box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
+    --hero-gradient:
+        linear-gradient(160deg,
+            #fffaf0 0%,
+            #edf2f7 55%,
+            #d2e5f3 100%);
+
+    --button-gradient:
+        linear-gradient(135deg,
+            #3182ce,
+            #2c5282);
+
+    /* ===== Effects ===== */
+    --box-shadow:
+        0 10px 30px rgba(44, 82, 130, .15);
+
+    --box-shadow-2:
+        0 4px 18px rgba(44, 82, 130, .10);
+
+    --radius: 16px;
+    --trans-dur: .35s;
 }
 /*
     --trans-dur: 0.5s;
