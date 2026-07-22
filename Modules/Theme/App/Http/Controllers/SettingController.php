@@ -19,6 +19,7 @@ class SettingController extends Controller
     }
     public function settings_store(Request $request, $param1 = '', $id = '')
     {
+        // dd($request->all());
         $data = $request->except('_token');
 
         if ($param1 == 'theme_settings') {
@@ -45,8 +46,8 @@ class SettingController extends Controller
                         ['description' => $filePath]
                     );
                 }else{
-                       if (!empty($item)) {
-                    theme_setting::updateOrCreate(
+                    if ($request->has($key)) {
+                        theme_setting::updateOrCreate(
                         ['type' => $key],
                         ['description' => $item]
                     );
