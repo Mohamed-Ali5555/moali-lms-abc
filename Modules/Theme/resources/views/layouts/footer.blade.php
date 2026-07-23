@@ -28,11 +28,13 @@
                 </p> --}}
 
                 <!-- 3. رقم التواصل والدعم -->
-                <div class="support-contact mb-4">
-                    <a href="https://wa.me/{{ get_theme_settings('technical') }}" target="_blank" class="d-flex align-items-center gap-2">
-                        <span>للدعم الفني: <strong>{{ get_theme_settings('technical') }}</strong></span>
-                    </a>
-                </div>
+                @if (get_theme_settings('technical_status') == 1)
+                    <div class="support-contact mb-4">
+                        <a href="https://wa.me/{{ get_theme_settings('technical') }}" target="_blank" class="d-flex align-items-center gap-2">
+                            <span>للدعم الفني: <strong>{{ get_theme_settings('technical') }}</strong></span>
+                        </a>
+                    </div>
+                @endif
 
                 <!-- 4. وسائل التواصل -->
                 <div class="social-icons d-flex gap-3 mb-5">
