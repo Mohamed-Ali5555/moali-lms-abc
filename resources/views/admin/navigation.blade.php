@@ -83,11 +83,11 @@
                                 <a href="{{ route('admin.course.create') }}">{{ get_phrase('Add New Course') }}</a>
                             </li>
                         @endif
-                        @if (has_permission('admin.coupons'))
+                        <!-- @if (has_permission('admin.coupons'))
                             <li class="sidebar-second-li @if ($current_route == 'admin.coupons' || $current_route == 'admin.coupon.users_coupon') active @endif">
                                 <a href="{{ route('admin.coupons') }}">{{ get_phrase('Coupons') }}</a>
                             </li>
-                        @endif
+                        @endif -->
                     </ul>
                 </li>
             @endif
@@ -124,7 +124,7 @@
             @endif
 
 
-        @if (has_permission('admin.wallet.index'))
+        <!-- @if (has_permission('admin.wallet.index'))
             <li class="sidebar-first-li first-li-have-sub
                 {{ $current_route == 'admin.wallet.index' || $current_route == 'admin.wallet_category.index' ? 'active' : ''}}">
                 <a href="javascript:void(0);">
@@ -150,7 +150,7 @@
 
                 </ul>
             </li>
-        @endif
+        @endif -->
 
 
             @if (has_permission('admin.bootcamps'))
