@@ -52,12 +52,14 @@
         <div class="footer-bottom py-3">
             <div class="container">
                 <div class="flex-column-reverse flex-sm-row justify-content-between text-center small d-flex">
-                    <p class="mb-2 mb-sm-0">&copy; <span>
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                        </span> جميع الحقوق محفوظة لـ <a href="https://wa.me/+201044445330" target="_blank" class="text-decoration-none fw-bold" style="color: rgb(var(--c-accent-rgb))">Arkan</a>
-                    </p>
+                    @if (get_theme_settings('copyright_status') != 0)
+                        <p class="mb-2 mb-sm-0">&copy; <span>
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                            </span> {{ get_theme_settings('copyright_prefix') ?: 'جميع الحقوق محفوظة لـ' }} <a href="{{ get_theme_settings('copyright_url') ?: 'https://wa.me/+201044445330' }}" target="_blank" rel="noopener" class="text-decoration-none fw-bold" style="color: rgb(var(--c-accent-rgb))">{{ get_theme_settings('copyright_text') ?: 'Arkan' }}</a>
+                        </p>
+                    @endif
                     @if (get_theme_settings('terms_status') == 1)
                         <a href="{{ route('theme.terms.condition') }}">الشروط والأحكام وسياسة الخصوصية</a>
                     @endif

@@ -268,6 +268,37 @@
                         <div class="settings-section">
                             <h4 class="section-title">{{ get_phrase('Footer Settings') }}</h4>
 
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="toggle-group">
+                                            <label class="form-label ol-form-label toggle-label" for="copyright_status">{{ get_phrase('Copyright Status') }}</label>
+                                            <select class="form-control ol-form-control ol-select2" name="copyright_status" id="copyright_status" required>
+                                                <option value="1" @if (get_theme_settings('copyright_status') != 0) selected @endif>{{ get_phrase('Active') }}</option>
+                                                <option value="0" @if (get_theme_settings('copyright_status') == 0) selected @endif>{{ get_phrase('Inactive') }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label ol-form-label" for="copyright_text">{{ get_phrase('Copyright Text') }}</label>
+                                        <input type="text" name="copyright_text" id="copyright_text" class="form-control ol-form-control" value="{{ get_theme_settings('copyright_text') ?: 'Arkan' }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label ol-form-label" for="copyright_prefix">{{ get_phrase('Copyright Prefix') }}</label>
+                                <input type="text" name="copyright_prefix" id="copyright_prefix" class="form-control ol-form-control" value="{{ get_theme_settings('copyright_prefix') ?: 'جميع الحقوق محفوظة لـ' }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label ol-form-label" for="copyright_url">{{ get_phrase('Copyright Link') }}</label>
+                                <input type="url" name="copyright_url" id="copyright_url" class="form-control ol-form-control" value="{{ get_theme_settings('copyright_url') ?: 'https://wa.me/+201044445330' }}">
+                            </div>
+
                             <div class="form-group">
                                 <label for="footer_description" class="form-label ol-form-label">{{ get_phrase('Footer Description') }}<span class="required">*</span></label>
                                 <textarea name="footer_description" rows="4" class="form-control ol-form-control text_editor" id="footer_description" placeholder="{{ get_phrase('Enter your footer description') }}" aria-label="{{ get_phrase('Enter your footer description') }}" required>{{ get_theme_settings('footer_description') }}</textarea>
